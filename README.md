@@ -1,5 +1,5 @@
 # habit_tracker_iu
-This project is the assignment of a course from the IU university of applied science, Data Science. B.Sc. and is part of a Portfolio
+This project is the assignment of a course from the "IU University of Applied Science", Data Science. B.Sc. and is part of a Portfolio
 
 Habit Tracker is a command-line application that helps users track and analyze their habits. It was developed in the Ubuntu environment locally and pushed to GitHub only after it was successfully tested.
 ### Features
@@ -15,10 +15,11 @@ Habit Tracker is a command-line application that helps users track and analyze t
 ### Usage
 To use the Habit Tracker, run the main script from the command line:
 
-
 ```python
 python habit_tracker.py
 ```
+The program will store a **'habits.json'** file locally to ensure data persistance.
+
 
 ### Running Tests
 Habit Tracker includes a suite of unit tests to ensure that its core functionality works as expected. 
