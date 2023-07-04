@@ -173,7 +173,8 @@ class Habit:
                     self.completions.append(completion_date)
         elif self.period == 'weekly':
             for i in range(4):
-                if random.choice([True, False]):  # Randomly decide whether to add a completion
+                # Ensure at least two completions for weekly habits
+                if i < 2 or random.choice([True, False]):
                     completion_date = reference_date + datetime.timedelta(weeks=i)
                     self.completions.append(completion_date)
 
@@ -455,7 +456,7 @@ def main():
         print("3. Complete Habit")
         print("4. List Habits by Periodicity")
         print("5. View Streaks")
-        print("6. Find Struggling Habit")  # New option
+        print("6. Find Struggling Habit")  
         print("7. Exit")
 
         choice = input("Enter choice: ")
@@ -470,13 +471,10 @@ def main():
             tracker.get_habit(name).complete()
         elif choice == '4':
             print(tracker.habits_by_periodicity())
-        # elif choice == '6':
-        #     print(tracker.longest_run_streak())
-
         elif choice == '5':
             tracker.view_streaks()
         elif choice == '6':
-            tracker.find_struggling_habit()  # New option
+            tracker.find_struggling_habit() 
         elif choice == '7':                                                                                                                                                                   
             tracker.save_to_file('habits.json')
             break
